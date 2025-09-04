@@ -1,0 +1,89 @@
+<template>
+        <!-- Header Image -->
+    <div class="header-image">
+            <img src="https://en.wikipedia.org/wiki/Boracay#/media/File:Boracay_White_Beach.png" alt="Disaster Header" />
+        </div>
+    <lightning-card title="">
+        <div class="card-title">
+            <span class="selected-disaster-title">Selected Disaster</span>
+        </div>
+        <!-- Disaster Info -->
+        <div class="slds-m-around_medium disaster-info">
+            <p>
+                <lightning-icon icon-name="utility:priority" size="x-small"></lightning-icon>
+                <strong>{disasterName}</strong>
+            </p>
+            <p>
+                <lightning-icon icon-name="utility:event" size="x-small"></lightning-icon>
+                Apply by <strong>{applyBy}</strong>
+            </p>
+            <p>
+                <lightning-icon icon-name="standard:document" size="x-small"></lightning-icon>
+                {documentsRequired} Documents Required
+            </p>
+            <br><br>
+            <p>
+                To apply for assistance for this disaster, you'll need to do the following:
+            </p>
+        </div>
+
+        <!-- Step Flow -->
+        <div class="flow-container">
+            <!-- Step 1 -->
+            <div class="step active">
+                <lightning-icon icon-name="standard:user" size="large"></lightning-icon>
+                <p>Register for NWD SBA</p>
+            </div>
+
+            <!-- <div class="arrow-wrapper">
+                <lightning-icon 
+                    icon-name="utility:arrowright" 
+                    size="large" 
+                    variant="inverse" 
+                    alternative-text="Arrow">
+                </lightning-icon>
+            </div> -->
+            <div class="arrow-circle">
+                <svg viewBox="0 0 52 52" class="arrow-icon">
+                    <circle cx="26" cy="26" r="26" fill="yellow" />
+                    <path d="M18 26h16l-6-6m6 6l-6 6" stroke="black" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <!-- Step 2 -->
+            <div class="step">
+                <lightning-icon icon-name="standard:document" size="large"></lightning-icon>
+                <p>Start a Disaster Application</p>
+            </div>
+
+            <div class="arrow-circle">
+                <svg viewBox="0 0 52 52" class="arrow-icon">
+                    <circle cx="26" cy="26" r="26" fill="yellow" />
+                    <path d="M18 26h16l-6-6m6 6l-6 6" stroke="black" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+                <lightning-icon icon-name="utility:check" size="large"></lightning-icon>
+                <p>Complete the Application</p>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="button-container">
+            <lightning-button 
+                label="Register and begin application" 
+                variant="brand" 
+                class="green-button"
+                onclick={handleRegister}>
+            </lightning-button>
+        </div>
+        
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Email: support@disasteremergencymanagement.gov | Phone: (215)-111-1111</p>
+            <p>Call center hours: Monday–Friday, 7:00am–7:00pm ET</p>
+        </div>
+    </lightning-card>
+</template>
